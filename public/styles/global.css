@@ -1,0 +1,196 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background: #111;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.logo {
+  color: white;
+}
+
+/* Hero Section */
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #0077ff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn.secondary {
+  background: #444;
+}
+
+/* Projects */
+
+.projects {
+  padding: 80px 10%;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Contact */
+
+.contact {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+/* Footer */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  color: white;
+}
+
+/* =========================
+   ABOUT PAGE STYLES
+   ========================= */
+
+.about-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+.about-container h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.about-section {
+  margin-top: 40px;
+}
+
+.about-section h3 {
+  margin-bottom: 10px;
+}
+
+.about-section p {
+  line-height: 1.6;
+}
+
+/* Skills */
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+}
+
+.skill {
+  color: green;
+  font-weight: bold;
+  margin: 6px 0;
+}
+
+/* Hobbies */
+
+.hobbies {
+  margin-top: 10px;
+}
+
+.hobbies li {
+  margin-bottom: 5px;
+}
+
+/* Status Messages */
+
+.success-message {
+  color: green;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* ======================
+   BLOG PAGE
+   ====================== */
+
+.blog-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+.blog-title {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.blog-intro {
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Blog grid */
+
+.post-grid {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* Post cards */
+
+.post-card {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.post-card h3 {
+  margin-top: 0;
+}
+
+.post-card p {
+  margin: 15px 0;
+  color: #555;
+}

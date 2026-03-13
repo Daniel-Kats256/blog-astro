@@ -1,17 +1,96 @@
 ---
-
+const name = "Daniel Kats";
+const role = "Full Stack Developer";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>My Astro Site</h1>
-	</body>
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+
+    <title>{name} | Web Developer Portfolio</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/styles/global.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <h2 class="logo">{name}</h2>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/blog">Blog</a>
+        </nav>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Hello, I'm {name}</h1>
+        <p>{role} specializing in modern web applications.</p>
+
+        <div class="hero-buttons">
+            <a href="/about" class="btn">About Me</a>
+            <a href="/blog" class="btn secondary">Read Blog</a>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section class="projects">
+
+        <h2>Featured Projects</h2>
+
+        <div class="project-grid">
+
+            <div class="project-card">
+                <h3>Food Ordering System</h3>
+                <p>Django based food ordering application with authentication.</p>
+                <a href="#">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Flutter Mobile App</h3>
+                <p>Cross-platform mobile application built with Flutter.</p>
+                <a href="#">View Project</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Data Visualization Dashboard</h3>
+                <p>Interactive dashboard using modern web technologies.</p>
+                <a href="#">View Project</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact Section -->
+    <section class="contact">
+
+        <h2>Get In Touch</h2>
+
+        <p>
+            Interested in working together or discussing a project?
+        </p>
+
+        <a href="mailto:your@email.com" class="btn">Contact Me</a>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© {new Date().getFullYear()} {name}. All rights reserved.</p>
+    </footer>
+
+</body>
 </html>
