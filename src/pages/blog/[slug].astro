@@ -1,0 +1,57 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { posts } from "../../data/blog.js";
+
+const { slug } = Astro.params;
+const post = posts.find((p) => p.slug === slug);
+---
+
+<MainLayout title={post.title}>
+
+<section class="py-5 bg-body">
+
+  <div class="container" style="max-width: 800px;">
+
+    <a href="/blog"
+      class="text-primary text-decoration-none d-inline-block mb-3"
+      data-aos="fade-right"
+    >
+      ← Back to Blog
+    </a>
+
+    <h1 class="fw-bold text-primary"
+      data-aos="fade-up"
+    >
+      {post.title}
+    </h1>
+
+    <small class="text-secondary"
+      data-aos="fade-up"
+      data-aos-delay="100"
+    >
+      {post.date}
+    </small>
+
+    <div data-aos="zoom-in" data-aos-delay="200">
+      <img src={post.image} class="img-fluid rounded my-4" />
+    </div>
+
+    <p class="text-secondary fs-5"
+      data-aos="fade-up"
+      data-aos-delay="300"
+    >
+      {post.description}
+    </p>
+
+    <div data-aos="fade-up" data-aos-delay="400">
+      <hr />
+      <p>
+        This is your simple blog post page with AOS animations enabled.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+</MainLayout>
