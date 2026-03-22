@@ -4,6 +4,16 @@ import { posts } from "../../data/blog.js";
 
 const { slug } = Astro.params;
 const post = posts.find((p) => p.slug === slug);
+export async function getStaticPaths() {
+  const posts = import.meta.glob('../*.md', { eager: true });
+
+  return Object.values(posts).map((post) => ({
+    params: {
+      slug: post.frontmatter.slug || post.frontmatter.title.toLowerCase().replace(/\s+/g, '-'),
+    },
+    props: { post },
+  }));
+}
 ---
 
 <MainLayout title={post.title}>
